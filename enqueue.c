@@ -28,13 +28,31 @@ void enqueu (int x )//this x is peramiter
 //when we done fist insertion ,that time it r = 0 also same time f = 0 , next time insertion , so this time do not increase frot (f)
 
 {
-    if (rear=max-1)
+    if (rear==max-1)
     {
         printf("the queue is full ");
          return ;        
-    }
+    }// overflow condition
+    
+    //below line ,are when queue is not empty >>>>
     rear=rear+1;
     a[rear]= x;
+    //<<<>>>>>>
+    if (front == -1)
+    {
+        front=0;
+    }
     
+    
+    return 0;
+}
+
+void dequeue(){
+    if (front==-1)
+    {
+        printf("the queue is empty");
+
+    }
+    a[rear]
     
 }
